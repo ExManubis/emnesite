@@ -1,0 +1,78 @@
+/* CSS RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+    
+    img {
+    width: 100%;
+    height: auto;
+    display: block;
+    }
+
+/* GRIDS */
+.grid_5-10 {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    width: 100vw;
+    height: 90vh;
+}
+
+/* NAV */
+nav {
+    height: 10vh;
+}
+
+/* INDEX */
+#index_img {
+    grid-column: 1 / span 5;
+    grid-row: 1 / span 10;
+    object-fit: cover;
+    align-self: stretch;
+}
+
+.index_header_line_1 {
+    margin-left: 5px;
+    grid-column: 1 / span 5;
+    grid-row: 2 / span 1;
+    z-index: 1;
+}
+
+.index_header_line_2 {
+    margin-left: 5px;
+    grid-column: 1 / span 5;
+    grid-row: 3 / span 1;
+    z-index: 1;
+}
+
+.index_header_line_3 {
+    margin-right: 5px;
+    grid-column: 3 / span 3;
+    grid-row: 4 / span 1;
+    text-align: end;
+    z-index: 1;
+}
+
+.index_header_line_4 {
+    margin-left: 5px;
+    grid-column: 1 / span 5;
+    grid-row: 5 / span 1;
+    z-index: 1;
+}
+
+.index_header_line_5 {
+    grid-column: 2 / span 3;
+    grid-row: 6 / span 1;
+    text-align: center;
+    z-index: 1;
+}
+
+#index_button {
+    grid-column: 2 /span 3;
+    grid-row: 8;
+    z-index: 1;
+    justify-self: center;
+    margin-top: 3rem;
+}
