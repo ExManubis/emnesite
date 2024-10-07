@@ -38,6 +38,25 @@ h1 {
     line-height: normal;
 }
 
+/* FONT-SIZES */
+@media (min-width: 550px) {
+    .hero {
+        font-size: 6rem;
+    }
+}
+
+@media (min-width: 800px) {
+    .hero {
+        font-size: 7rem;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .hero {
+        font-size: 8rem;
+    }
+}
 
 /* BODY */
 body {
@@ -71,18 +90,4 @@ a {
     font-optical-sizing: auto;
     font-weight: 400;
     font-size: 1.5rem;
-}
-
-
-@media (min-width: 550px) {
-    .hero {
-        font-size: 6rem;
-    }
-}
-
-@media (min-width: 850px) {
-
-    .hero {
-        font-size: 9rem;
-    }
 }
