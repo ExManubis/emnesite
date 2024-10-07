@@ -19,36 +19,25 @@
 
 /* FONTS */
 
-    /* google fonts */
-    .eb-garamond-textfont {
-    font-family: "EB Garamond", serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
+/* Hero */
+.hero {
+    color: var(--heading_color);
+    font-family: "Helvetica Neue";
+    font-weight: 700;
     font-style: normal;
-    }
-
-:root {
-    /* primitives */
-    
-    /* Hero */
-    .hero {
-        color: var(--heading_color);
-        font-family: "Helvetica Neue";
-        font-weight: 700;
-        font-style: normal;
-        font-size: 3.5rem;
-    }
-
-    /* H1 */
-    h1 {
-        color: var(--heading_color);
-        font-family: "Helvetica Neue";
-        font-size: 4rem;
-        font-style: normal;
-        font-weight: 700;
-        line-height: normal;
-    }
+    font-size: 3.5rem;
 }
+
+/* H1 */
+h1 {
+    color: var(--heading_color);
+    font-family: "Helvetica Neue";
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
 
 /* BODY */
 body {
@@ -82,4 +71,18 @@ a {
     font-optical-sizing: auto;
     font-weight: 400;
     font-size: 1.5rem;
+}
+
+
+@media (min-width: 550px) {
+    .hero {
+        font-size: 6rem;
+    }
+}
+
+@media (min-width: 850px) {
+
+    .hero {
+        font-size: 9rem;
+    }
 }
