@@ -4,17 +4,20 @@
     /* primitives */
     --grey50: #F2F2F2;
     --grey100: #A6A6A6;
-    --grey150: #1D1D1D;
-    --grey200: #262626;
+    --grey150: #262626;
+    --grey200: #1D1D1D;
     
     /* tokens */
     --body_bg: var(--grey200);
     --nav_bg: var(--grey200);
+    --main_bg: var(--grey200);
     --heading_color: var(--grey50);
     --button_border: var(--grey50);
     --button_bg: var(--grey200);
     --button_color: var(--grey50);
     --link_color: var(--grey50);
+    --menu_bg: var(--grey150);
+    --text_color: var(--grey50);
 }
 
 /* FONTS */
@@ -26,16 +29,38 @@
     font-weight: 700;
     font-style: normal;
     font-size: 3.5rem;
+    text-shadow: 5px 5px 5px var(--grey150);
 }
 
 /* H1 */
 h1 {
     color: var(--heading_color);
     font-family: "Helvetica Neue";
-    font-size: 4rem;
+    font-size: 3rem;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+}
+
+/* H2 */
+h2 {
+    color: var(--heading_color);
+    font-family: "Helvetica Neue";
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0.5rem;
+}
+
+/* Paragrafs */
+p {
+    color: var(--text_color);
+    font-family: "EB Garamond";
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+    word-break: normal;
+    margin: 0rem 0.5rem 0rem 0.5rem;
 }
 
 /* FONT-SIZES */
@@ -65,11 +90,18 @@ body {
 
 /* NAV */
 nav {
-    background-color: var(--nav_bg);
+    background-color: none;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 10vh;
+    z-index: 2;
 }
 
 /* MAIN */
-
+main {
+    background-color: var(--main_bg);
+}
 /* LINKS */
 a {
     text-decoration: none;
@@ -87,7 +119,7 @@ a {
     text-align: center;
     font-family: 'EB Garamond';
     font-style: italic;
-    font-optical-sizing: auto;
     font-weight: 400;
     font-size: 1.5rem;
+    box-shadow: 8px 8px 5px #1D1D1D;
 }

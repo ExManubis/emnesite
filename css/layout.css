@@ -12,6 +12,23 @@
     }
 
 /* GRIDS */
+.grid_welcome {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr 4fr 1fr;
+    width: 100vw;
+    height: 90vh;
+}
+
+@media (min-width: 1000px) {
+    .grid_welcome {
+        grid-template-rows: repeat(8, 1fr);
+        width: 95vw;
+        margin-left: 2rem;
+        gap: 1rem;
+    }
+}
+
 .grid_5-10 {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -81,13 +98,85 @@ nav {
     margin-top: 3rem;
 }
 
+/* WELCOME */
+.welcome_img {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+    z-index: 0;
+    object-fit: cover;
+    align-self: stretch;
+}
+
+@media (min-width: 1000px) {
+    .welcome_img {
+        grid-column: 2;
+        grid-row: 2 / span 6;
+        margin-top: 1.25rem;
+    }
+}
+
+.welcome_hero {
+    grid-column: 1 /span 2;
+    grid-row: 1;
+    z-index: 1;
+    text-align: right;
+    margin-right: 1rem;
+}
+
+@media (min-width: 1000px) {
+    .welcome_hero {
+        grid-row: 2 /span 1;
+        text-align: left;
+    }
+}
+
+.text_box#welcome_box {
+    grid-column: 1 / span 2;
+    grid-row: 2;
+    z-index: 1;
+    margin-top: 2rem;
+}
+
+@media (min-width: 1000px) {
+    .text_box#welcome_box {
+        grid-column: 1 / span 1;
+        grid-row: 3 /span 4;
+    }
+}
+
+#welcome_button {
+    grid-column: 1 / span 2;
+    grid-row: 3;
+    z-index: 1;
+    justify-self: center;
+    place-self: bottom;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 1000px) {
+    #welcome_button {
+        grid-column: 2;
+        grid-row: 8;
+        justify-self: end;
+    }
+}
+
+/*#############################################################*/
 /* DESKTOP LAYOUT */
 @media (min-width: 1000px) {
 
     /* GRIDS */
     .grid_5-10 {
+        display: grid;
         grid-template-columns: repeat(6, 1fr);
         grid-template-rows: repeat(5, 1fr);
+    }
+
+    .grid_2-7 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(7, 1fr);
     }
 
     /* INDEX */
@@ -108,27 +197,13 @@ nav {
 
     #index_button {
         margin-top: 5rem;
+        margin-bottom: 5rem;
         grid-column: 2 / span 1;
         grid-row: 5 / span 1;
     }
 
-    .index_header_line_1 {
+    .index_header_line_1, .index_header_line_2, .index_header_line_3, .index_header_line_4, .index_header_line_5  {
         display: none;
     }
-
-    .index_header_line_2 {
-        display: none;
-    }
-
-    .index_header_line_3 {
-        display: none;
-    }
-
-    .index_header_line_4 {
-        display: none;
-    }
-
-    .index_header_line_5 {
-        display: none;
-    }
+        
 }
