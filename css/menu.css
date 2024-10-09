@@ -65,6 +65,7 @@ nav {
     width: 40vw;
     overflow: auto;
     background-color: var(--menu_bg);
+    opacity: 0;
     position: fixed;
     top: 10vh;
     right: 0;
@@ -98,6 +99,7 @@ nav.active .menu {
     right: 0;
     width: 100vw;
     transition: ease-out 0.75s;
+    opacity: 1;
     transform: translateX(0);
 }
 
