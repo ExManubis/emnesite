@@ -15,11 +15,13 @@
     --button_border: var(--grey50);
     --button_bg: var(--grey200);
     --button_color: var(--grey50);
-    --link_color: var(--grey50);
+    --link_color: var(--grey100);
+    --link_color_hover: var(--grey50);
     --menu_bg: var(--grey150);
     --text_color: var(--grey50);
     --info_bg_color: var(--grey200);
     --list_color: var(--grey50);
+    --burger_color: var(--grey50);
 }
 
 /* FONTS */
@@ -30,7 +32,7 @@
     font-family: "Helvetica Neue";
     font-weight: 700;
     font-style: normal;
-    font-size: 3.5rem;
+    font-size: 3rem;
     text-shadow: 5px 5px 5px var(--grey150);
 }
 
@@ -77,14 +79,20 @@ p {
 /* FONT-SIZES */
 @media (min-width: 550px) {
     .hero {
-        font-size: 6rem;
+        font-size: 4rem;
     }
+
 }
 
 @media (min-width: 800px) {
     .hero {
         font-size: 7rem;
     }
+
+    h1 {
+        font-size: 4rem;
+    }
+
 }
 
 @media (min-width: 1200px) {
@@ -92,6 +100,7 @@ p {
     .hero {
         font-size: 8rem;
     }
+    
 }
 
 /* BODY */
@@ -99,20 +108,11 @@ body {
     background-color: var(--body_bg);
 }
 
-/* NAV */
-nav {
-    background-color: none;
-    position: fixed;
-    top: 0;
-    width: 100vw;
-    height: 10vh;
-    z-index: 2;
-}
-
 /* MAIN */
 main {
     background-color: var(--main_bg);
 }
+
 /* LINKS */
 a {
     text-decoration: none;
@@ -133,6 +133,11 @@ a {
     font-weight: 400;
     font-size: 1.5rem;
     box-shadow: 8px 8px 5px #1D1D1D;
+}
+
+.button a {
+    text-decoration: none;
+    color: var(--button_color);
 }
 
 /* INFO BOX */
