@@ -50,7 +50,6 @@ h2 {
     font-family: "Helvetica Neue";
     font-size: 2rem;
     font-weight: 700;
-    margin: 0.5rem;
     text-shadow: 5px 5px 5px var(--grey150); 
 }
 
@@ -137,7 +136,11 @@ a {
 }
 
 /* INFO BOX */
-
+@media (min-width: 1000px) {
+    .info_box {
+        background-color: var(--info_bg_color);
+    }
+}
 
 /* LISTS */
 ul {
