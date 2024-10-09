@@ -1,0 +1,125 @@
+/* CSS FOR BURGER MENU */
+
+/* NAV */
+nav {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--nav_bg);
+    margin-top: 1rem;
+    width: 100vw;
+    height: 10vh;
+    z-index: 4;
+}
+
+@media (min-width: 1000px) {
+    nav {
+        background: none;
+    }
+}
+
+/* LOGO */
+.logo {
+    height: auto;
+    width: 4rem;
+    margin: 1rem;
+    z-index: 4;
+}
+
+/* BURGER ICON */
+.burger {
+    margin: 1.5rem;
+    width: 3rem;
+    height: 2rem;
+    display: block;
+    z-index: 4;
+}
+
+.burger .line {
+    width: 100%;
+    height: 0.2rem;
+    margin-bottom: 0.5rem;
+    background-color: var(--burger_color);
+    transition: 0.2s linear;
+}
+
+.burger.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(0.5rem, 0.5rem);
+    transition: 0.2s linear;
+}
+
+.burger.active .line:nth-child(2) {
+    opacity: 0;
+    transition: 0.15s linear;
+}
+
+.burger.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(0.5rem, -0.5rem);
+    transition: 0.2s linear;
+}
+
+/* MENU */
+.menu {
+    display: none;
+}
+
+.menu ul {
+    margin-top: 5rem;
+    text-align: right;
+}
+
+@media (min-width: 1000px) {
+    .menu ul:first-child {
+        margin-top: 15rem;
+    }
+}
+
+.menu li:first-child {
+    color: var(--heading_color);
+    font-family: "Helvetica Neue";
+    font-size: 1.75rem;
+    font-weight: 700;
+}
+
+nav.active .menu {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    background-color: var(--menu_bg);
+    position: fixed;
+    top: 10vh;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 3;
+    padding-bottom: 10rem;
+}
+
+@media (min-width: 1000px) {
+    nav.active .menu {
+        top: 0;
+        left: 60vw;
+        right: 0;
+        height: 100vh;
+        width: 40vw;
+    }
+}
+
+nav.active .menu li {
+    margin: 0rem 1.25rem;
+}
+
+.menu a {
+    font-size: 1.25rem;
+    font-family: "EB Garamond";
+    font-weight: 500;
+    line-height: 200%;
+    display: block;
+    color: var(--link_color);
+    text-decoration: none;
+    transition: 0.3s color;
+}
+
+.menu a:hover {
+    color: var(--link_color_hover);
+}
