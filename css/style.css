@@ -18,11 +18,13 @@
     --link_color: var(--grey50);
     --menu_bg: var(--grey150);
     --text_color: var(--grey50);
+    --info_bg_color: var(--grey200);
+    --list_color: var(--grey50);
 }
 
 /* FONTS */
 
-/* Hero */
+/* HERO */
 .hero {
     color: var(--heading_color);
     font-family: "Helvetica Neue";
@@ -49,6 +51,16 @@ h2 {
     font-size: 2rem;
     font-weight: 700;
     margin: 0.5rem;
+    text-shadow: 5px 5px 5px var(--grey150); 
+}
+
+/* H3 */
+h3 {
+    color: var(--heading_color);
+    font-family: "Helvetica Neue";
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
 }
 
 /* Paragrafs */
@@ -122,4 +134,17 @@ a {
     font-weight: 400;
     font-size: 1.5rem;
     box-shadow: 8px 8px 5px #1D1D1D;
+}
+
+/* INFO BOX */
+
+
+/* LISTS */
+ul {
+    color: var(--list_color);
+    font-family: "EB Garamond";
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 150%;
+    list-style-type: none;
 }
