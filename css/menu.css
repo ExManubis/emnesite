@@ -6,7 +6,6 @@ nav {
     display: flex;
     justify-content: space-between;
     background-color: var(--nav_bg);
-    margin-top: 1rem;
     width: 100vw;
     height: 10vh;
     z-index: 4;
@@ -14,6 +13,7 @@ nav {
 
 @media (min-width: 1000px) {
     nav {
+        margin-top: 1rem;
         background: none;
     }
 }
@@ -24,6 +24,7 @@ nav {
     width: 4rem;
     margin: 1rem;
     z-index: 4;
+    filter: drop-shadow( 0.25rem 0.25rem 0.25rem #000000)
 }
 
 /* BURGER ICON */
@@ -40,6 +41,7 @@ nav {
     height: 0.2rem;
     margin-bottom: 0.5rem;
     background-color: var(--burger_color);
+    box-shadow: 0.25rem 0.25rem 0.25rem #000000;
     transition: 0.2s linear;
 }
 
