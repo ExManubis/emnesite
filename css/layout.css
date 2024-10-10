@@ -192,7 +192,6 @@
     grid-row: 3;
     z-index: 1;
     justify-self: center;
-    place-self: bottom;
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
@@ -229,6 +228,12 @@
     object-fit: cover;
     filter: brightness(40%);
 
+}
+@media (max-width: 1000px) {
+    #sw_img_1 {
+    object-position: 60%;
+    }
+    
 }
 
 @media (min-width: 1000px) {
@@ -336,6 +341,12 @@
     z-index: 0;
 }
 
+#sw_img_3 {
+    object-fit: cover;
+    align-items: stretch;
+    min-height: 30vh;
+}
+
 @media (min-width: 1000px) {
     .film_img_3 {
         grid-column: 2;
@@ -345,6 +356,11 @@
         align-self: stretch;
         object-fit: cover;
 
+    }
+
+    #sw_img_3 {
+        max-height: 40%;
+        object-position: 30% 40%;
     }
 }
 
