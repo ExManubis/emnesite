@@ -251,7 +251,14 @@
         grid-column: 1 / span 3;
         grid-row: 2;
     }
+
+    .film_hero#hero_center {
+        grid-column: 2 / span 2;
+        text-align: center;
+    }
 }
+
+
 
 .info_box {
     grid-column: 2;
