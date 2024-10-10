@@ -246,6 +246,10 @@
     margin-right: 1rem;
 }
 
+.film_hero#hero_center {
+    margin-top: 10rem;
+}
+
 @media (min-width: 1000px) {
     .film_hero {
         grid-column: 1 / span 3;
@@ -255,6 +259,7 @@
     .film_hero#hero_center {
         grid-column: 2 / span 2;
         text-align: center;
+        margin-top: 7rem;
     }
 }
 
