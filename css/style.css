@@ -19,7 +19,7 @@
     --link_color_hover: var(--grey50);
     --menu_bg: var(--grey150);
     --text_color: var(--grey50);
-    --info_bg_color: var(--grey200);
+    --info_bg_color: #1d1d1dac;
     --list_color: var(--grey50);
     --burger_color: var(--grey50);
 }
@@ -73,6 +73,9 @@ p {
     font-weight: 500;
     line-height: 150%;
     word-break: normal;
+    text-wrap: pretty;
+    overflow-wrap: break-word;
+    hyphens: auto;
     margin: 0rem 0.5rem 0rem 0.5rem;
 }
 
