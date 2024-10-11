@@ -149,9 +149,14 @@ a {
     box-shadow: 8px 8px 5px #1D1D1D;
 }
 
+.button:hover {
+    color: var(--button_bg);
+    background-color: var(--button_color);
+    transition: 0.5s;
+}
+
 .button a {
     text-decoration: none;
-    color: var(--button_color);
 }
 
 /* INFO BOX */
