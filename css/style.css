@@ -8,6 +8,7 @@
     --grey200: #1D1D1D;
     
     /* tokens */
+    --html_bg: var(--grey200);
     --body_bg: var(--grey200);
     --nav_bg: var(--grey200);
     --main_bg: var(--grey200);
@@ -108,6 +109,11 @@ p {
         font-size: 8rem;
     }
     
+}
+
+/* HTML */
+html {
+    background-color: var(--html_bg);
 }
 
 /* BODY */
