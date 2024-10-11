@@ -95,7 +95,7 @@ p {
 
 @media (min-width: 800px) {
     .hero {
-        font-size: 7rem;
+        font-size: 5rem;
     }
 
     h1 {
@@ -110,6 +110,10 @@ p {
         font-size: 8rem;
     }
     
+    .hero#quote {
+        font-size: 5rem;
+        margin: 0 10vw 0 10vw;
+    }
 }
 
 /* HTML */
