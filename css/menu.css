@@ -142,6 +142,7 @@ nav.active .menu li {
 .menu a#current {
     color: var(--link_color_current);
     font-size: 1.5rem;
+    transition: ease-in 0.3s;
 }
 
 .menu a:hover {

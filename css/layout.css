@@ -29,6 +29,8 @@
     grid-row: 1 / span 10;
     object-fit: cover;
     align-self: stretch;
+    height: 569.141;
+    width: 520;
 }
 
 .index_title {
@@ -338,6 +340,7 @@
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: 1fr auto 1fr;
     }
+
 }
 
 .film_img_3 {
