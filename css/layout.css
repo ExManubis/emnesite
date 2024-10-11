@@ -104,6 +104,8 @@
     margin-top: 5rem;
     object-fit: cover;
     align-self: stretch;
+    width: 100vw;
+    height: auto;
 }
 
 @media (min-width: 1000px) {
@@ -112,6 +114,9 @@
         grid-row: 1 / span 2;
         margin-top: 6rem;
         object-fit: cover;
+        width: unset;
+        height: auto;
+        max-width: 50vw;
     }
 }
 
