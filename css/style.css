@@ -18,6 +18,7 @@
     --button_color: var(--grey50);
     --link_color: var(--grey100);
     --link_color_hover: var(--grey50);
+    --link_color_current: var(--grey50);
     --menu_bg: var(--grey150);
     --text_color: var(--grey50);
     --info_bg_color: #1d1d1dac;
