@@ -11,11 +11,6 @@
     display: block;
     }
 
-/* GLOBAL VALUES */
-* {
-    box-sizing: border-box;
-}
-
 /* GLOBAL GRIDS */
 
 .grid_12-12 {
@@ -211,7 +206,7 @@
 
     #welcome_button {
         grid-column: 1 / span 2;
-        grid-row: 1 / span 2;
+        grid-row: 1;
         justify-self: center;
         margin-top: 5vh;
         margin-bottom: 5vh;
