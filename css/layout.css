@@ -404,7 +404,7 @@
         /* button */
         #congrats_button {
             grid-column: 1 / span 12;
-            grid-row: 5 / span 5;
+            grid-row: 5 / span 3;
             place-self: end center;
         }
 
