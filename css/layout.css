@@ -16,12 +16,6 @@
     box-sizing: border-box;
 }
 
-@media screen and (min-width:1024px) {
-    html {
-        scroll-snap-type: y mandatory;
-    }
-}
-
 /* GLOBAL GRIDS */
 
 .grid_12-12 {
@@ -31,17 +25,7 @@
     height: 100vh;
     width: 100vw;
     gap: 2vw;
-}
-
-.grid_12-12_snap {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(12, 1fr);
-    height: 100vh;
-    width: 100vw;
-    gap: 2vw;
-    overflow: hidden;
-    scroll-snap-align: start;
+    overflow-x: hidden;
 }
 
 .grid_12-auto {
@@ -51,18 +35,9 @@
     height: 100vh;
     width: 100vw;
     gap: 2vw;
+    overflow-x: hidden;
 }
 
-.grid_12-auto_snap {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(12, auto);
-    height: 100vh;
-    width: 100vw;
-    gap: 2vw;
-    overflow: hidden;
-    scroll-snap-align: start;
-}
 /* INDEX */
     
     /* image */
