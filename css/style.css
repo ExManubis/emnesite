@@ -24,6 +24,12 @@
     --info_bg_color: #1d1d1dac;
     --list_color: var(--grey50);
     --burger_color: var(--grey50);
+    --login_bg: var(--grey200);
+    --login_border: var(--grey50);
+    --login_input_bg: var(--grey150);
+    --login_input_border: var(--grey100);
+    --login_input_border_focus: var(--grey50);
+    --login_input_color: var(--grey50);
 }
 
 /* FONTS */
