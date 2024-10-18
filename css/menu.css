@@ -176,7 +176,8 @@ nav.active .menu li {
     line-height: 125%;
     color: var(--text_color);
     z-index: 4;
-    transition: ease-in 0.3s;
+    transform: translateY(-130%);
+    transition: opacity ease-in 0.3s;
 }
 
 @media screen and (min-width: 1024px) {
@@ -200,7 +201,8 @@ nav.active .menu li {
     opacity: 1;
     background-color: var(--login_bg);
     border: 2px solid var(--login_border);
-    transition: ease-out 0.4s;
+    transform: translateY(0%);
+    transition:  opacity ease-out 0.4s;
 }
 
 @media screen and (min-width: 1024px) {
@@ -217,10 +219,15 @@ nav.active .menu li {
 }
 
 .login .exit {
+    display: none;
     width: 5%;
     margin-top: 5%;
     margin-left: 90%;
     cursor: pointer;
+}
+
+.login.active .exit {
+  display: block;
 }
 
 .exit .line {
@@ -239,7 +246,12 @@ nav.active .menu li {
 }
 
 .login_form {
-    margin: 5% 25% 25% 25%;
+    display: none;
+}
+
+.login.active .login_form {
+    display: block;
+    margin: 0vw 10vw 0vw 10vw;
 }
 
 .login_form h1 {
