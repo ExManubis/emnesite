@@ -47,8 +47,8 @@
         z-index: 0;
         object-fit: cover;
         align-self: stretch;
-        height: 570;
-        width: 520;
+        min-height: 570px;
+        min-width: 520px;
     }
 
     @media screen and (min-width: 1024px) {

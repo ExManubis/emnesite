@@ -254,8 +254,17 @@ nav.active .menu li {
     margin: 0vw 10vw 0vw 10vw;
 }
 
-.login_form h1 {
-    margin-bottom: 5%;
+.login_form h2 {
+    font-size: 3rem;
+    font-style: normal;
+    text-shadow: none;
+    margin-bottom: 10%;
+}
+
+@media screen and (min-width: 800px) {
+    .login_form h2 {
+        font-size: 4rem;
+    }
 }
 
 .login_form .button {
