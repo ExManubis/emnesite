@@ -47,8 +47,7 @@
         z-index: 0;
         object-fit: cover;
         align-self: stretch;
-        min-height: 570px;
-        min-width: 520px;
+        aspect-ratio: 520/570;
     }
 
     @media screen and (min-width: 1024px) {
