@@ -410,12 +410,14 @@
             grid-column: 1 / span 12;
             grid-row: 5 / span 3;
             place-self: end center;
+            margin-top: 15rem;
         }
 
         @media screen and (min-width:1024px) {
             #congrats_button {
                 grid-column: 1 / span 6;
                 grid-row: 5 / span 4;
+                margin-top: 0rem;
             }
         }
 
