@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1D1D1D">
+    <meta name='description' content='A page congratulation the user on completing their first film reel.'>
     <link rel="stylesheet" href="../../css/layout.css">
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../css/menu.css">
@@ -11,10 +13,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap"
         rel="stylesheet">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../favicon/favicon-16x16.png">
+    <link rel="manifest" href="../../site.webmanifest">
     <title>Congratulations!</title>
 </head>
 
@@ -43,25 +45,46 @@
                 <li><a href="#">Coming soon!</a></li>
             </ul>
         </div>
-        <div class='burger'>
-            <div class='line'></div>
-            <div class='line'></div>
-            <div class='line'></div>
+        <div class='login'>
+            <div class='exit'>
+                <div class='line'></div>
+                <div class='line'></div>
+            </div>
+            <div class='login_form'>
+                <h2>Please, login:</h2>
+                <form action="#">Username:</form>
+                <input type="text">
+                <br>
+                <br>
+                <form action="#">Password:</form>
+                <input type="password" name="password" id="pass">
+                <div class="button">
+                    Submit
+                </div>
+            </div>
+        </div>
+        <div class='nav_right'>
+            <img src="../../svg/profile.svg" alt="Profile icon" class='profile_icon'>
+            <div class='burger'>
+                <div class='line'></div>
+                <div class='line'></div>
+                <div class='line'></div>
+            </div>
         </div>
     </nav>
     <main>
 
-        <div class='congrats_grid'>
+        <div class='grid_12-auto'>
             <h1 class='hero' id='congrats_hero'>Congratulations!</h1>
             <h2 class='congrats_h2'>You've just finished your second reel.</h2>
             <p class='congrats_p'>Click the button below to begin your next challenge!</p>
             <img src="../../img/congrats/congrats.webp" class='congrats_img'
-                alt="Still from Star Wars showing the three heroes recieving their medals for destroying the death star">
+                alt="Still from Star Wars showing the three heroes recieving their medals for destroying the death star.">
 
             <a href="#" class='button' id='congrats_button'>Continue</a>
         </div>
     </main>
-    <script src='/js/menu.js'></script>
+    <script src='../../js/menu.js'></script>
 </body>
 
 </html>
