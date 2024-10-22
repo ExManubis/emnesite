@@ -14,7 +14,11 @@
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
+    {% if title %}
+    <title>{{ title }}</title>
+    {% else %}
     <title>The Film Bucket Challenge</title>
+    {% endif %}
 </head>
 
 <body>
@@ -49,16 +53,39 @@
                     <div class='line'></div>
                 </div>
                 <div class='login_form'>
+                    {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                    <ul>
+                        {% for message in messages %}
+                        <li>{{ message }}</li>
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
+                    {% endwith %}
                     <h2>Please, login:</h2>
-                    <form action="#">Username:</form>
-                    <input type="text">
-                    <br>
-                    <br>
-                    <form action="#">Password:</form>
-                    <input type="password" name="password" id="pass">
-                    <div class="button">
-                        Submit
-                    </div>
+                    <form action="" method='post' novalidate>
+                        {{ form.hidden_tag() }}
+                        <p>
+                            {{ form.username.label }}
+                            <br>
+                            {{ form.username() }}
+                            <br>
+                            {% for error in form.username.errors %}
+                            <span class='login_error'>{{ error }}</span>
+                            {% endfor %}
+                        </p>
+                        <p>
+                            {{form.password.label }}
+                            <br>
+                            {{ form.password() }}
+                            <br>
+                            {% for error in form.password.errors %}
+                            <span class='login_error'>{{ error }}</span>
+                            {% endfor %}
+                        </p>
+                        <p>{{ form.remember_me() }} {{ form.remember_me.label }}</p>
+                        <p class='button'>{{ form.submit() }}</p>
+                    </form>
                 </div>
             </div>
             <div class='nav_right'>
