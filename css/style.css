@@ -36,6 +36,13 @@
 @font-face {
     font-family: "Helvetica Neue";
     src: url("../fonts/helveticaneue.woff2");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "EB Garamond";
+    src: url("../fonts/EBGaramond-VariableFont_wght.woff");
+    font-display: swap;
 }
 
 /* HERO */
