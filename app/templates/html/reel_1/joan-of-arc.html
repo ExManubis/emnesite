@@ -1,146 +1,71 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %}
+{% block content %}
+<div class='grid_12-12'>
+    <img src="{{ url_for('static',filename='img/joan_arc/joan-of-arc_1.webp') }}" class='film_img_1'
+    alt="Still from the movie The Passion of Joan of Arc showing Joan having her hai cut short.">
+    <h1 class='hero film_hero'>THE PASSION OF JOAN OF ARC</h1>
+    <div class='info_box'>
+        <h3>FILM INFO</h3>
+        <ul>
+            <li>Carl T.H. Dreyer</li>
+            <li>Denmark/France</li>
+            <li>1928</li>
+            <li>81 Minutes</li>
+            <li>Black & White</li>
+            <li>Danish & French</li>
+        </ul>
+    </div>
+</div>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#1D1D1D">
-    <meta name='description'
-        content='Why and how the movie The Passion of Joan of Arc brought inward looking psychology to films.'>
-    <link rel="stylesheet" href="../../css/layout.css">
-    <link rel="stylesheet" href="../../css/style.css">
-    <link rel="stylesheet" href="../../css/menu.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="../../favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../../favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../../favicon/favicon-16x16.png">
-    <link rel="manifest" href="../../site.webmanifest">
-    <title>The Passion of Joan of Arc (1928)</title>
-</head>
+<div class='grid_12-12'>
+    <img src="{{ url_for('static',filename='img/joan_arc/joan-of-arc_2.webp') }}" class='film_img_2'
+    alt="Still image from the film The Passion of Joan of Arc showing Joan being humiliated by being dressed up with a straw crown and an arrow for a scepter.">
+    <h1 class='hero film_quote' id='quote'>“To save France <br> - it's why I was born.”</h1>
+</div>
 
-<body>
-    <nav>
-        <a href="../../index.html" class='logo'><img src="../../svg/logo.svg" alt="picture of logo"></a>
-        <div class='menu'>
-            <ul>
-                <li>Reel 1</li>
-                <li><a href="../../html/reel_1/joan-of-arc.html" id='current'>The Passion of Joan of Arc (1928)</a></li>
-                <li><a href="../../html/reel_1/seven-samurai.html">Seven Samurai (1954)</a></li>
-                <li><a href="../../html/reel_1/persona.html">Persona (1966)</a></li>
-                <li><a href="../../html/reel_1/star-wars.html">Star Wars (1977)</a></li>
-                <li><a href="../../html/reel_1/goodfellas.html">Goodfellas (1990)</a></li>
-            </ul>
-            <ul>
-                <li>Reel 2</li>
-                <li><a href="../../html/reel_2/godzilla.html">Godzilla (1954)</a></li>
-                <li><a href="../../html/reel_2/space-odyssey.html">2001: A Space Odyssey (1969)</a></li>
-                <li><a href="../../html/reel_2/godfather.html">The Godfather (1972)</a></li>
-                <li><a href="../../html/reel_2/stalker.html">Stalker (1979)</a></li>
-                <li><a href="../../html/reel_2/shoah.html">Shoah (1986)</a></li>
-            </ul>
-            <ul>
-                <li>Reel 3</li>
-                <li><a href="#">Coming soon!</a></li>
-            </ul>
+<div class='grid_12-auto'>
+    <img src="{{ url_for('static',filename='img/joan_arc/joan-of-arc_3.webp') }}" class='film_img_3'
+    alt="Still image from the film - The Passion of Joan of Arc. The image shows Joan signing her confession and sentence.">
+    <h1 class='film_article_header'>Reverberations of Faith</h1>
+    <div class='film_article'>
+        
+        <p>The Passion of Joan of Arc (1928), directed by Carl Theodor Dreyer, is a
+            seminal
+            work in the history of
+            cinema, revered for its innovative techniques and deep emotional resonance. At the heart of its
+            influence is Renée Falconetti’s haunting portrayal of Joan, whose expression of faith and
+            despair is
+            captured through Dreyer’s revolutionary use of close-ups. The film’s visual language,
+            characterized
+            by
+            stark lighting and minimalist sets, emphasizes the emotional weight of Joan’s trial, stripping
+            away
+            distractions to focus on her internal struggle and martyrdom. Therefore Dreyer establishes an
+            intimate
+            connection that transcends the silent film format.
+            <br>
+            <br>
+            Dreyer's approach to storytelling is both poignant and profound, exploring themes of faith,
+            sacrifice,
+            and the oppression of women. By presenting Joan as a complex figure—simultaneously strong and
+            vulnerable—the film challenges traditional narratives surrounding female characters in cinema
+            and
+            invites reflections on broader social issues such as gender, power, and the human spirit's
+            resilience in
+            the face of injustice.
+            <br>
+            <br>
+            Its innovative techniques have influenced the language of cinema, paving the way for future
+            directors to
+            explore the emotional depths of their characters. The film’s legacy endures not only as a
+            technical
+            marvel but also as a powerful exploration of the human condition, making it a cornerstone of
+            cinematic
+            history that continues to move and inspire audiences nearly a century after its release.
+        </p>
+        <div class='container'>
+            <a href="{{ url_for('seven_samurai') }}" class='button film_button'>Next</a>
         </div>
-        <div class='login'>
-            <div class='exit'>
-                <div class='line'></div>
-                <div class='line'></div>
-            </div>
-            <div class='login_form'>
-                <h2>Please, login:</h2>
-                <form action="#">Username:</form>
-                <input type="text">
-                <br>
-                <br>
-                <form action="#">Password:</form>
-                <input type="password" name="password" id="pass">
-                <div class="button">
-                    Submit
-                </div>
-            </div>
-        </div>
-        <div class='nav_right'>
-            <img src="../../svg/profile.svg" alt="Profile icon" class='profile_icon'>
-            <div class='burger'>
-                <div class='line'></div>
-                <div class='line'></div>
-                <div class='line'></div>
-            </div>
-        </div>
-    </nav>
-    <main>
-        <div class='grid_12-12'>
-            <img src="../../img/joan_arc/joan-of-arc_1.webp" class='film_img_1'
-                alt="Still from the movie The Passion of Joan of Arc showing Joan having her hai cut short.">
-            <h1 class='hero film_hero'>THE PASSION OF JOAN OF ARC</h1>
-            <div class='info_box'>
-                <h3>FILM INFO</h3>
-                <ul>
-                    <li>Carl T.H. Dreyer</li>
-                    <li>Denmark/France</li>
-                    <li>1928</li>
-                    <li>81 Minutes</li>
-                    <li>Black & White</li>
-                    <li>Danish & French</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class='grid_12-12'>
-            <img src="../../img/joan_arc/joan-of-arc_2.webp" class='film_img_2'
-                alt="Still image from the film The Passion of Joan of Arc showing Joan being humiliated by being dressed up with a straw crown and an arrow for a scepter.">
-            <h1 class='hero film_quote' id='quote'>“To save France <br> - it's why I was born.”</h1>
-        </div>
-
-        <div class='grid_12-auto'>
-            <img src="../../img/joan_arc/joan-of-arc_3.webp" class='film_img_3'
-                alt="Still image from the film - The Passion of Joan of Arc. The image shows Joan signing her confession and sentence.">
-            <h1 class='film_article_header'>Reverberations of Faith</h1>
-            <div class='film_article'>
-
-                <p>The Passion of Joan of Arc (1928), directed by Carl Theodor Dreyer, is a
-                    seminal
-                    work in the history of
-                    cinema, revered for its innovative techniques and deep emotional resonance. At the heart of its
-                    influence is Renée Falconetti’s haunting portrayal of Joan, whose expression of faith and
-                    despair is
-                    captured through Dreyer’s revolutionary use of close-ups. The film’s visual language,
-                    characterized
-                    by
-                    stark lighting and minimalist sets, emphasizes the emotional weight of Joan’s trial, stripping
-                    away
-                    distractions to focus on her internal struggle and martyrdom. Therefore Dreyer establishes an
-                    intimate
-                    connection that transcends the silent film format.
-                    <br>
-                    <br>
-                    Dreyer's approach to storytelling is both poignant and profound, exploring themes of faith,
-                    sacrifice,
-                    and the oppression of women. By presenting Joan as a complex figure—simultaneously strong and
-                    vulnerable—the film challenges traditional narratives surrounding female characters in cinema
-                    and
-                    invites reflections on broader social issues such as gender, power, and the human spirit's
-                    resilience in
-                    the face of injustice.
-                    <br>
-                    <br>
-                    Its innovative techniques have influenced the language of cinema, paving the way for future
-                    directors to
-                    explore the emotional depths of their characters. The film’s legacy endures not only as a
-                    technical
-                    marvel but also as a powerful exploration of the human condition, making it a cornerstone of
-                    cinematic
-                    history that continues to move and inspire audiences nearly a century after its release.
-                </p>
-                <div class='container'>
-                    <a href="../reel_1/seven-samurai.html" class='button film_button'>Next</a>
-                </div>
-            </div>
-        </div>
-
-    </main>
-    <script src='../../js/menu.js'></script>
-</body>
-
-</html>
+    </div>
+</div>
+{% endblock content %}

@@ -7,13 +7,13 @@
     <meta name="theme-color" content="#1D1D1D">
     <meta name='description'
         content='A film themed bucket list challenge for both experienced and aspiring cinophiles alike.'>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/layout.css">
-    <link rel="stylesheet" href="css/menu.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-    <link rel="manifest" href="site.webmanifest">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/layout.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/menu.css') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static',filename='favicon/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static',filename='favicon/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static',filename='favicon/favicon-16x16.png') }}">
+    <link rel="manifest" href="{{ url_for('static',filename='site.webmanifest') }}">
     {% if title %}
     <title>{{ title }}</title>
     {% else %}
@@ -24,7 +24,8 @@
 <body>
     <main>
         <nav>
-            <a href="{{ url_for('index') }}" class='logo'><img src="./svg/logo.svg" alt="logo icon"></a>
+            <a href="{{ url_for('index') }}" class='logo'><img src="{{ url_for('static',filename='svg/logo.svg') }}"
+                    alt="logo icon"></a>
             <div class='menu'>
                 <ul>
                     <li>Reel 1</li>
@@ -63,33 +64,35 @@
                     {% endif %}
                     {% endwith %}
                     <h2>Please, login:</h2>
-                    <form action="" method='post' novalidate>
+                    <form action="/login" method='post' novalidate>
                         {{ form.hidden_tag() }}
                         <p>
-                            {{ form.username.label }}
+                            {{ form.username.label() }}:
                             <br>
                             {{ form.username() }}
+                            <br>
                             <br>
                             {% for error in form.username.errors %}
                             <span class='login_error'>{{ error }}</span>
                             {% endfor %}
                         </p>
                         <p>
-                            {{form.password.label }}
+                            {{ form.password.label }}:
                             <br>
                             {{ form.password() }}
+                            <br>
                             <br>
                             {% for error in form.password.errors %}
                             <span class='login_error'>{{ error }}</span>
                             {% endfor %}
                         </p>
                         <p>{{ form.remember_me() }} {{ form.remember_me.label }}</p>
-                        <p class='button'>{{ form.submit() }}</p>
+                        <p>{{ form.submit(class = 'button') }}</p>
                     </form>
                 </div>
             </div>
             <div class='nav_right'>
-                <img src="svg/profile.svg" alt="Profile icon" class='profile_icon'>
+                <img src="{{ url_for('static',filename='svg/profile.svg') }}" alt="Profile icon" class='profile_icon'>
                 <div class='burger'>
                     <div class='line'></div>
                     <div class='line'></div>
@@ -99,7 +102,7 @@
         </nav>
         {% block content %}{% endblock %}
     </main>
-    <script src='js/menu.js'></script>
+    <script src="{{ url_for('static',filename='js/menu.js') }}"></script>
 </body>
 
 </html>

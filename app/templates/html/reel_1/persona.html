@@ -1,102 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#1D1D1D">
-    <meta name='description' content='How Persona left a profound impact on the world of cinema.'>
-    <link rel="stylesheet" href="../../css/layout.css">
-    <link rel="stylesheet" href="../../css/style.css">
-    <link rel="stylesheet" href="../../css/menu.css">
-    <link rel="stylesheet" href="../../css/mobile.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="../../favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../../favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../../favicon/favicon-16x16.png">
-    <link rel="manifest" href="../../site.webmanifest">
-    <title>Persona (1966)</title>
-</head>
-
-<body>
-    <nav>
-        <a href="../../index.html" class='logo'><img src="../../svg/logo.svg" alt="picture of logo"></a>
-        <div class='menu'>
+{% extends "base.html" %}
+    {% block content %}
+    <div class='grid_12-12'>
+        <img src="{{ url_for('static',filename='img/persona/persona_1.webp') }}" class='film_img_1'
+        alt="Still from the movie Persona showing a boy raising his hand towards a projection of a womans face.">
+        <h1 class='hero film_hero' id='hero_center'>PERSONA</h1>
+        <div class='info_box'>
+            <h3>FILM INFO</h3>
             <ul>
-                <li>Reel 1</li>
-                <li><a href="../../html/reel_1/joan-of-arc.html">The Passion of Joan of Arc (1928)</a></li>
-                <li><a href="../../html/reel_1/seven-samurai.html">Seven Samurai (1954)</a></li>
-                <li><a href="../../html/reel_1/persona.html" id='current'>Persona (1966)</a></li>
-                <li><a href="../../html/reel_1/star-wars.html">Star Wars (1977)</a></li>
-                <li><a href="../../html/reel_1/goodfellas.html">Goodfellas (1990)</a></li>
-            </ul>
-            <ul>
-                <li>Reel 2</li>
-                <li><a href="../../html/reel_2/godzilla.html">Godzilla (1954)</a></li>
-                <li><a href="../../html/reel_2/space-odyssey.html">2001: A Space Odyssey (1969)</a></li>
-                <li><a href="../../html/reel_2/godfather.html">The Godfather (1972)</a></li>
-                <li><a href="../../html/reel_2/stalker.html">Stalker (1979)</a></li>
-                <li><a href="../../html/reel_2/shoah.html">Shoah (1986)</a></li>
-            </ul>
-            <ul>
-                <li>Reel 3</li>
-                <li><a href="#">Coming soon!</a></li>
+                <li>Ingmar Bergman</li>
+                <li>Sweden</li>
+                <li>1966</li>
+                <li>81 Minutes</li>
+                <li>Black & White</li>
+                <li>Swedish</li>
             </ul>
         </div>
-        <div class='login'>
-            <div class='exit'>
-                <div class='line'></div>
-                <div class='line'></div>
-            </div>
-            <div class='login_form'>
-                <h2>Please, login:</h2>
-                <form action="#">Username:</form>
-                <input type="text">
-                <br>
-                <br>
-                <form action="#">Password:</form>
-                <input type="password" name="password" id="pass">
-                <div class="button">
-                    Submit
-                </div>
-            </div>
-        </div>
-        <div class='nav_right'>
-            <img src="../../svg/profile.svg" alt="Profile icon" class='profile_icon'>
-            <div class='burger'>
-                <div class='line'></div>
-                <div class='line'></div>
-                <div class='line'></div>
-            </div>
-        </div>
-    </nav>
-    <main>
-        <div class='grid_12-12'>
-            <img src="../../img/persona/persona_1.webp" class='film_img_1'
-                alt="Still from the movie Persona showing a boy raising his hand towards a projection of a womans face.">
-            <h1 class='hero film_hero' id='hero_center'>PERSONA</h1>
-            <div class='info_box'>
-                <h3>FILM INFO</h3>
-                <ul>
-                    <li>Ingmar Bergman</li>
-                    <li>Sweden</li>
-                    <li>1966</li>
-                    <li>81 Minutes</li>
-                    <li>Black & White</li>
-                    <li>Swedish</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class='grid_12-12'>
-            <img src="../../img/persona/persona_2.webp" class='film_img_2'
-                alt="Still image from the film Persona showing the character Alma wearing sunglasses.">
-            <h1 class='hero film_quote' id='quote'>“You should go on with this part until it is played out, until it
-                loses interest
-                for you. Then you can leave it, just as you've left your other parts one by one”</h1>
+    </div>
+    
+    <div class='grid_12-12'>
+        <img src="{{ url_for('static',filename='img/persona/persona_2.webp') }}" class='film_img_2'
+        alt="Still image from the film Persona showing the character Alma wearing sunglasses.">
+        <h1 class='hero film_quote' id='quote'>“You should go on with this part until it is played out, until it
+            loses interest
+            for you. Then you can leave it, just as you've left your other parts one by one”</h1>
         </div>
         <div class='grid_12-auto'>
-            <img src="../../img/persona/persona_3.webp" class='film_img_3'
-                alt="Still image from the film Persona the characters Alma and Elisabet standing close together.">
+            <img src="{{ url_for('static',filename='img/persona/persona_3.webp') }}" class='film_img_3'
+            alt="Still image from the film Persona the characters Alma and Elisabet standing close together.">
             <h1 class='film_article_header'>Masks of the Mind</h1>
             <div class='film_article'>
                 <p>
@@ -141,12 +71,9 @@
                     cinema.
                 </p>
                 <div class='container'>
-                    <a href="../reel_1/star-wars.html" class='button film_button'>Next</a>
+                    <a href="{{ url_for('star_wars') }}" class='button film_button'>Next</a>
                 </div>
             </div>
         </div>
-    </main>
-    <script src='../../js/menu.js'></script>
-</body>
-
-</html>
+        
+    {% endblock content %}

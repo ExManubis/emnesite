@@ -1,122 +1,48 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#1D1D1D">
-    <meta name='description' content='A guide on how to use the site.'>
-    <link rel="stylesheet" href="../css/layout.css">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/menu.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
-    <link rel="manifest" href="../site.webmanifest">
-    <title>Before you begin</title>
-</head>
-
-<body>
-    <nav>
-        <a href="../index.html" class='logo'><img src="../svg/logo.svg" alt="logo icon"></a>
-        <div class='menu'>
-            <ul>
-                <li>Reel 1</li>
-                <li><a href="../html/reel_1/joan-of-arc.html">The Passion of Joan of Arc (1928)</a></li>
-                <li><a href="../html/reel_1/seven-samurai.html">Seven Samurai (1954)</a></li>
-                <li><a href="../html/reel_1/persona.html">Persona (1966)</a></li>
-                <li><a href="../html/reel_1/star-wars.html">Star Wars (1977)</a></li>
-                <li><a href="../html/reel_1/goodfellas.html">Goodfellas (1990)</a></li>
-            </ul>
-            <ul>
-                <li>Reel 2</li>
-                <li><a href="../html/reel_2/godzilla.html">Godzilla (1954)</a></li>
-                <li><a href="../html/reel_2/space_odyssey.html">2001: A Space Odyssey (1969)</a></li>
-                <li><a href="../html/reel_2/godfather.html">The Godfather (1972)</a></li>
-                <li><a href="../html/reel_2/stalker.html">Stalker (1979)</a></li>
-                <li><a href="../html/reel_2/shoah.html">Shoah (1986)</a></li>
-            </ul>
-            <ul>
-                <li>Reel 3</li>
-                <li><a href="#">Coming soon!</a></li>
-            </ul>
-        </div>
-        <div class='login'>
-            <div class='exit'>
-                <div class='line'></div>
-                <div class='line'></div>
-            </div>
-            <div class='login_form'>
-                <h2>Please, login:</h2>
-                <form action="#">Username:</form>
-                <input type="text">
+{% extends "base.html" %}
+    {% block content %}
+    <div class='grid_12-auto'>
+        <img src="{{ url_for('static',filename='img/welcome/kane.webp') }}" class='welcome_img'
+        alt="Still from Citizen Kane showing Kane watching a movie intensely.">
+        <h1 class='hero welcome_hero'>Before you dive in</h1>
+        <div class='text_box' id='welcome_box'>
+            <h2 id='welcome_h2'>A brief message from us</h2>
+            <p>
+                Welcome to our cinematic bucket challenge!
                 <br>
                 <br>
-                <form action="#">Password:</form>
-                <input type="password" name="password" id="pass">
-                <div class="button">
-                    Submit
-                </div>
-            </div>
+                We crafted this challenge to ignite the passion of
+                aspiring cinephiles like you, making it easier and more enjoyable to explore the captivating
+                world of film. We know you’re probably eager to begin your journey, but before you continue, we want
+                to
+                give you some tips and advice on how to use our site, and get the most enjoyment out of your
+                experience.
+                <br>
+                <br>
+                When you look up recommended movies online, you will often stumble upon short, uninspired listicles
+                over
+                the same ten movie recommendations, or links to purchase books with titles such as “1000 films to
+                see
+                before you die!”. We don’t have a thousand movie recommendations for you yet, but what we do have is
+                a
+                fun, ever-evolving film bucket list for you to go through!
+                <br>
+                <br>
+                As these lists have a tendency to get very long and unwieldy, we have instead made our bucket
+                challenge
+                into smaller, bite-sized “mini-challenges”, each containing five films. We call these "Reels"! These
+                films span many
+                different
+                time-periods and genres, and each selection is meant to give the viewer a broad taste of the many
+                possibilities of the medium!
+                <br>
+                <br>
+                We sincerely hope you enjoy your journey - so make some popcorn, turn of the lights and let’s get
+                into
+                the first film!
+            </p>
         </div>
-        <div class='nav_right'>
-            <img src="../svg/profile.svg" alt="Profile icon" class='profile_icon'>
-            <div class='burger'>
-                <div class='line'></div>
-                <div class='line'></div>
-                <div class='line'></div>
-            </div>
+        <div class='container'>
+            <a href="{{ url_for('joan_of_arc') }}" class='button' id='welcome_button'>Continue</a>
         </div>
-    </nav>
-    <main>
-        <div class='grid_12-auto'>
-            <img src="../img/welcome/kane.webp" class='welcome_img'
-                alt="Still from Citizen Kane showing Kane watching a movie intensely.">
-            <h1 class='hero welcome_hero'>Before you dive in</h1>
-            <div class='text_box' id='welcome_box'>
-                <h2 id='welcome_h2'>A brief message from us</h2>
-                <p>
-                    Welcome to our cinematic bucket challenge!
-                    <br>
-                    <br>
-                    We crafted this challenge to ignite the passion of
-                    aspiring cinephiles like you, making it easier and more enjoyable to explore the captivating
-                    world of film. We know you’re probably eager to begin your journey, but before you continue, we want
-                    to
-                    give you some tips and advice on how to use our site, and get the most enjoyment out of your
-                    experience.
-                    <br>
-                    <br>
-                    When you look up recommended movies online, you will often stumble upon short, uninspired listicles
-                    over
-                    the same ten movie recommendations, or links to purchase books with titles such as “1000 films to
-                    see
-                    before you die!”. We don’t have a thousand movie recommendations for you yet, but what we do have is
-                    a
-                    fun, ever-evolving film bucket list for you to go through!
-                    <br>
-                    <br>
-                    As these lists have a tendency to get very long and unwieldy, we have instead made our bucket
-                    challenge
-                    into smaller, bite-sized “mini-challenges”, each containing five films. We call these "Reels"! These
-                    films span many
-                    different
-                    time-periods and genres, and each selection is meant to give the viewer a broad taste of the many
-                    possibilities of the medium!
-                    <br>
-                    <br>
-                    We sincerely hope you enjoy your journey - so make some popcorn, turn of the lights and let’s get
-                    into
-                    the first film!
-                </p>
-            </div>
-            <div class='container'>
-                <a href="../html/reel_1/joan-of-arc.html" class='button' id='welcome_button'>Continue</a>
-            </div>
-        </div>
-
-    </main>
-    <script src='../js/menu.js'></script>
-</body>
-
-</html>
+    </div>
+    {% endblock content %}

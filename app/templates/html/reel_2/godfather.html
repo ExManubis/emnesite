@@ -1,134 +1,61 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#1D1D1D">
-    <meta name='description' content='How Persona left a profound impact on the world of cinema.'>
-    <link rel="stylesheet" href="../../css/layout.css">
-    <link rel="stylesheet" href="../../css/style.css">
-    <link rel="stylesheet" href="../../css/menu.css">
-    <link rel="stylesheet" href="../../css/mobile.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="../../favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../../favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../../favicon/favicon-16x16.png">
-    <link rel="manifest" href="../../site.webmanifest">
-    <title>The Godfather (1972)</title>
-</head>
-
-<body>
-    <nav>
-        <a href="../../index.html" class='logo'><img src="../../svg/logo.svg" alt="picture of logo"></a>
-        <div class='menu'>
+{% extends "base.html" %}
+    {% block content %}
+    
+    <div class='grid_12-12'>
+        <img src="{{ url_for('static',filename='img/godfather/godfather_1.webp') }}" class='film_img_1'
+        alt="Still from the movie The Godfather showing Don Corleone being whispered in his ear.">
+        <h1 class='hero film_hero' id='hero_center'>THE <br>GODFATHER</h1>
+        <div class='info_box'>
+            <h3>FILM INFO</h3>
             <ul>
-                <li>Reel 1</li>
-                <li><a href="../../html/reel_1/joan-of-arc.html">The Passion of Joan of Arc (1928)</a></li>
-                <li><a href="../../html/reel_1/seven-samurai.html">Seven Samurai (1954)</a></li>
-                <li><a href="../../html/reel_1/persona.html">Persona (1966)</a></li>
-                <li><a href="../../html/reel_1/star-wars.html">Star Wars (1977)</a></li>
-                <li><a href="../../html/reel_1/goodfellas.html">Goodfellas (1990)</a></li>
-            </ul>
-            <ul>
-                <li>Reel 2</li>
-                <li><a href="../../html/reel_2/godzilla.html">Godzilla (1954)</a></li>
-                <li><a href="../../html/reel_2/space-odyssey.html">2001: A Space Odyssey (1969)</a></li>
-                <li><a href="../../html/reel_2/godfather.html" id='current'>The Godfather (1972)</a></li>
-                <li><a href="../../html/reel_2/stalker.html">Stalker (1979)</a></li>
-                <li><a href="../../html/reel_2/shoah.html">Shoah (1986)</a></li>
-            </ul>
-            <ul>
-                <li>Reel 3</li>
-                <li><a href="#">Coming soon!</a></li>
+                <li>Francis Ford Coppola</li>
+                <li>United States</li>
+                <li>1972</li>
+                <li>149 Minutes</li>
+                <li>Colour</li>
+                <li>English</li>
             </ul>
         </div>
-        <div class='login'>
-            <div class='exit'>
-                <div class='line'></div>
-                <div class='line'></div>
-            </div>
-            <div class='login_form'>
-                <h2>Please, login:</h2>
-                <form action="#">Username:</form>
-                <input type="text">
+    </div>
+    
+    <div class='grid_12-12'>
+        <img src="{{ url_for('static',filename='img/godfather/godfather_2.webp') }}" class='film_img_2'
+        alt="Still from the movie 2001: A Space Odyssey showing the character Dave in a spacesuit walking around a space station.">
+        <h1 class='hero film_quote' id='quote'>“I'm gonna make him an offer he can't refuse.”</h1>
+    </div>
+    <div class='grid_12-auto'>
+        <img src="{{ url_for('static',filename='img/godfather/godfather_3.webp') }}" class='film_img_3'
+        alt="Still from the movie 2001: A Space Odyssey showing a close-up of the character Dave wearing a space-suit.">
+        <h1 class='film_article_header'>Masters of Darkness</h1>
+        <div class='film_article'>
+            <p>
+                Intricate relationships and dualities occupy center stage in "The Godfather," as patriarch Don Vito
+                Corleone (Marlon Brando) faces the demands of the criminal underworld while striving to uphold the
+                family honor he holds dear. As the story unfolds, Vito's son, Michael Corleone (Al Pacino),
+                transforms from a reluctant outsider into a ruthless leader.
                 <br>
                 <br>
-                <form action="#">Password:</form>
-                <input type="password" name="password" id="pass">
-                <div class="button">
-                    Submit
-                </div>
+                Coppola's masterful adaptation of Mario Puzo's novel weaves a personal drama replete with
+                sociopolitical critique. "The Godfather" challenges the American Dream, unmasking the potential for
+                moral decay as ambition and power take the reins. Iconic lines such as "I'm going to make him an
+                offer he can't refuse" function not only as narrative fulcrums but also as haunting reminders of the
+                coercive forces that pervade this world.
+                <br>
+                <br>
+                Visually, "The Godfather" casts a spell with its rich, atmospheric cinematography. Coppola's use of
+                shadow and light, combined with Nino Rota's haunting score, elicits a palpable sense of nostalgia
+                and inevitability, transporting viewers into the web of organized crime.
+                <br>
+                <br>
+                The Godfather captivates us by dissecting the very essence of human struggle, delving into themes of
+                loyalty, corruption, and the complex interplay of moral ambiguity. This masterpiece stands the test
+                of time, urging us to introspect on the dynamics between family, power, and authority, proving
+                itself to be an enduring cinematic treasure that will continue to grip audiences for generations to
+                come.
+            </p>
+            <div class='container'>
+                <a href="{{ url_for('stalker') }}" class='button film_button'>Next</a>
             </div>
         </div>
-        <div class='nav_right'>
-            <img src="../../svg/profile.svg" alt="Profile icon" class='profile_icon'>
-            <div class='burger'>
-                <div class='line'></div>
-                <div class='line'></div>
-                <div class='line'></div>
-            </div>
-        </div>
-    </nav>
-    <main>
-        <div class='grid_12-12'>
-            <img src="../../img/godfather/godfather_1.webp" class='film_img_1'
-                alt="Still from the movie The Godfather showing Don Corleone being whispered in his ear.">
-            <h1 class='hero film_hero' id='hero_center'>THE <br>GODFATHER</h1>
-            <div class='info_box'>
-                <h3>FILM INFO</h3>
-                <ul>
-                    <li>Francis Ford Coppola</li>
-                    <li>United States</li>
-                    <li>1972</li>
-                    <li>149 Minutes</li>
-                    <li>Colour</li>
-                    <li>English</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class='grid_12-12'>
-            <img src="../../img/godfather/godfather_2.webp" class='film_img_2'
-                alt="Still from the movie 2001: A Space Odyssey showing the character Dave in a spacesuit walking around a space station.">
-            <h1 class='hero film_quote' id='quote'>“I'm gonna make him an offer he can't refuse.”</h1>
-        </div>
-        <div class='grid_12-auto'>
-            <img src="../../img/godfather/godfather_3.webp" class='film_img_3'
-                alt="Still from the movie 2001: A Space Odyssey showing a close-up of the character Dave wearing a space-suit.">
-            <h1 class='film_article_header'>Masters of Darkness</h1>
-            <div class='film_article'>
-                <p>
-                    Intricate relationships and dualities occupy center stage in "The Godfather," as patriarch Don Vito
-                    Corleone (Marlon Brando) faces the demands of the criminal underworld while striving to uphold the
-                    family honor he holds dear. As the story unfolds, Vito's son, Michael Corleone (Al Pacino),
-                    transforms from a reluctant outsider into a ruthless leader.
-                    <br>
-                    <br>
-                    Coppola's masterful adaptation of Mario Puzo's novel weaves a personal drama replete with
-                    sociopolitical critique. "The Godfather" challenges the American Dream, unmasking the potential for
-                    moral decay as ambition and power take the reins. Iconic lines such as "I'm going to make him an
-                    offer he can't refuse" function not only as narrative fulcrums but also as haunting reminders of the
-                    coercive forces that pervade this world.
-                    <br>
-                    <br>
-                    Visually, "The Godfather" casts a spell with its rich, atmospheric cinematography. Coppola's use of
-                    shadow and light, combined with Nino Rota's haunting score, elicits a palpable sense of nostalgia
-                    and inevitability, transporting viewers into the web of organized crime.
-                    <br>
-                    <br>
-                    The Godfather captivates us by dissecting the very essence of human struggle, delving into themes of
-                    loyalty, corruption, and the complex interplay of moral ambiguity. This masterpiece stands the test
-                    of time, urging us to introspect on the dynamics between family, power, and authority, proving
-                    itself to be an enduring cinematic treasure that will continue to grip audiences for generations to
-                    come.
-                </p>
-                <div class='container'>
-                    <a href="../reel_2/stalker.html" class='button film_button'>Next</a>
-                </div>
-            </div>
-        </div>
-    </main>
-    <script src='../../js/menu.js'></script>
-</body>
-
-</html>
+    </div>
+    {% endblock content %}

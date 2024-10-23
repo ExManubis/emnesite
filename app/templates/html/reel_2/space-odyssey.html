@@ -1,129 +1,55 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#1D1D1D">
-    <meta name='description' content='How Persona left a profound impact on the world of cinema.'>
-    <link rel="stylesheet" href="../../css/layout.css">
-    <link rel="stylesheet" href="../../css/style.css">
-    <link rel="stylesheet" href="../../css/menu.css">
-    <link rel="stylesheet" href="../../css/mobile.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="../../favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../../favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../../favicon/favicon-16x16.png">
-    <link rel="manifest" href="../../site.webmanifest">
-    <title>2001: A Space Odyssey (1969)</title>
-</head>
-
-<body>
-    <nav>
-        <a href="../../index.html" class='logo'><img src="../../svg/logo.svg" alt="picture of logo"></a>
-        <div class='menu'>
+{% extends "base.html" %}
+    {% block content %}
+    <div class='grid_12-12'>
+        <img src="{{ url_for('static',filename='img/space_odyssey/space_odyssey_1.webp') }}" class='film_img_1'
+        alt="Still from the movie 2001: A Space Odyssey showing the computer HAL:9000.">
+        <h1 class='hero film_hero'>2001: A Space Odyssey</h1>
+        <div class='info_box'>
+            <h3>FILM INFO</h3>
             <ul>
-                <li>Reel 1</li>
-                <li><a href="../../html/reel_1/joan-of-arc.html">The Passion of Joan of Arc (1928)</a></li>
-                <li><a href="../../html/reel_1/seven-samurai.html">Seven Samurai (1954)</a></li>
-                <li><a href="../../html/reel_1/persona.html">Persona (1966)</a></li>
-                <li><a href="../../html/reel_1/star-wars.html">Star Wars (1977)</a></li>
-                <li><a href="../../html/reel_1/goodfellas.html">Goodfellas (1990)</a></li>
-            </ul>
-            <ul>
-                <li>Reel 2</li>
-                <li><a href="../../html/reel_2/godzilla.html">Godzilla (1954)</a></li>
-                <li><a href="../../html/reel_2/space-odyssey.html" id='current'>2001: A Space Odyssey (1969)</a></li>
-                <li><a href="../../html/reel_2/godfather.html">The Godfather (1972)</a></li>
-                <li><a href="../../html/reel_2/stalker.html">Stalker (1979)</a></li>
-                <li><a href="../../html/reel_2/shoah.html">Shoah (1986)</a></li>
-            </ul>
-            <ul>
-                <li>Reel 3</li>
-                <li><a href="#">Coming soon!</a></li>
+                <li>Stanley Kubrick</li>
+                <li>United States</li>
+                <li>1969</li>
+                <li>149 Minutes</li>
+                <li>Colour</li>
+                <li>English</li>
             </ul>
         </div>
-        <div class='login'>
-            <div class='exit'>
-                <div class='line'></div>
-                <div class='line'></div>
-            </div>
-            <div class='login_form'>
-                <h2>Please, login:</h2>
-                <form action="#">Username:</form>
-                <input type="text">
+    </div>
+    
+    <div class='grid_12-12'>
+        <img src="{{ url_for('static',filename='img/space_odyssey/space_odyssey_2.webp') }}" class='film_img_2'
+        alt="Still from the movie 2001: A Space Odyssey showing the character Dave in a spacesuit walking around a space station.">
+        <h1 class='hero film_quote' id='quote'>“I'm sorry Dave, I'm afraid I can't do that.”</h1>
+    </div>
+    <div class='grid_12-auto'>
+        <img src="{{ url_for('static',filename='img/space_odyssey/space_odyssey_3.webp') }}" class='film_img_3'
+        alt="Still from the movie 2001: A Space Odyssey showing a close-up of the character Dave wearing a space-suit.">
+        <h1 class='film_article_header'>One Big Step for Mankind</h1>
+        <div class='film_article'>
+            <p>
+                Stanley Kubrick's 2001: A Space Odyssey (1968) is universally regarded as a groundbreaking work that
+                transcends traditional narrative structures within the science fiction genre. Co-written with Arthur
+                C. Clarke, the film explores complex themes such as evolution, artificial intelligence, and
+                humanity's existential relationship with technology.
                 <br>
                 <br>
-                <form action="#">Password:</form>
-                <input type="password" name="password" id="pass">
-                <div class="button">
-                    Submit
-                </div>
+                Kubrick's meticulous craftsmanship employs practical effects and innovative cinematography
+                to create an immersive experience, exemplified by the iconic rotating space station. The judicious
+                use of classical music—particularly Strauss's Also sprach Zarathustra—carries profound emotional
+                weight, establishing a hypnotic rhythm that complements the film's existential themes.
+                <br>
+                <br>
+                The film's ambiguous conclusion, featuring Dave Bowman's transformation into the Star Child,
+                challenges conventional narrative interpretation. This transformation serves as a metaphor for
+                humanity's potential evolution, inviting audiences to contemplate their place in the universe.
+                Ultimately, 2001: A Space Odyssey is not merely a cinematic experience but a philosophical
+                exploration of our past, present, and possible future, solidifying its status as a timeless
+                masterpiece in the annals of film history.
+            </p>
+            <div class='container'>
+                <a href="{{ url_for('godfather') }}" class='button film_button'>Next</a>
             </div>
         </div>
-        <div class='nav_right'>
-            <img src="../../svg/profile.svg" alt="Profile icon" class='profile_icon'>
-            <div class='burger'>
-                <div class='line'></div>
-                <div class='line'></div>
-                <div class='line'></div>
-            </div>
-        </div>
-    </nav>
-    <main>
-        <div class='grid_12-12'>
-            <img src="../../img/space_odyssey/space_odyssey_1.webp" class='film_img_1'
-                alt="Still from the movie 2001: A Space Odyssey showing the computer HAL:9000.">
-            <h1 class='hero film_hero'>2001: A Space Odyssey</h1>
-            <div class='info_box'>
-                <h3>FILM INFO</h3>
-                <ul>
-                    <li>Stanley Kubrick</li>
-                    <li>United States</li>
-                    <li>1969</li>
-                    <li>149 Minutes</li>
-                    <li>Colour</li>
-                    <li>English</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class='grid_12-12'>
-            <img src="../../img/space_odyssey/space_odyssey_2.webp" class='film_img_2'
-                alt="Still from the movie 2001: A Space Odyssey showing the character Dave in a spacesuit walking around a space station.">
-            <h1 class='hero film_quote' id='quote'>“I'm sorry Dave, I'm afraid I can't do that.”</h1>
-        </div>
-        <div class='grid_12-auto'>
-            <img src="../../img/space_odyssey/space_odyssey_3.webp" class='film_img_3'
-                alt="Still from the movie 2001: A Space Odyssey showing a close-up of the character Dave wearing a space-suit.">
-            <h1 class='film_article_header'>One Big Step for Mankind</h1>
-            <div class='film_article'>
-                <p>
-                    Stanley Kubrick's 2001: A Space Odyssey (1968) is universally regarded as a groundbreaking work that
-                    transcends traditional narrative structures within the science fiction genre. Co-written with Arthur
-                    C. Clarke, the film explores complex themes such as evolution, artificial intelligence, and
-                    humanity's existential relationship with technology.
-                    <br>
-                    <br>
-                    Kubrick's meticulous craftsmanship employs practical effects and innovative cinematography
-                    to create an immersive experience, exemplified by the iconic rotating space station. The judicious
-                    use of classical music—particularly Strauss's Also sprach Zarathustra—carries profound emotional
-                    weight, establishing a hypnotic rhythm that complements the film's existential themes.
-                    <br>
-                    <br>
-                    The film's ambiguous conclusion, featuring Dave Bowman's transformation into the Star Child,
-                    challenges conventional narrative interpretation. This transformation serves as a metaphor for
-                    humanity's potential evolution, inviting audiences to contemplate their place in the universe.
-                    Ultimately, 2001: A Space Odyssey is not merely a cinematic experience but a philosophical
-                    exploration of our past, present, and possible future, solidifying its status as a timeless
-                    masterpiece in the annals of film history.
-                </p>
-                <div class='container'>
-                    <a href="../reel_2/godfather.html" class='button film_button'>Next</a>
-                </div>
-            </div>
-        </div>
-    </main>
-    <script src='../../js/menu.js'></script>
-</body>
-
-</html>
+    </div>
+    {% endblock content %}

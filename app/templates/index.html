@@ -19,10 +19,10 @@
             Cinema
         </div>
         
-        <img id='index_img' src="img/index/persona_index.webp"
+        <img id='index_img' src="{{ url_for('static',filename='img/index/persona_index.webp') }}"
         alt="Still from the movie Persona showing the character Alma wearing sunglasses.">
         
-        <a href="html/welcome.html" class='button' id='index_button'>Begin</a>
+        <a href="{{ url_for('welcome') }}" class='button' id='index_button'>Begin</a>
         
     </div>
     {% endblock content %}

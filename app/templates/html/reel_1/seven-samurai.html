@@ -1,104 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#1D1D1D">
-    <meta name='description' content='How Seven Samurai set the bar for epic cinematic story-telling.'>
-    <link rel="stylesheet" href="../../css/layout.css">
-    <link rel="stylesheet" href="../../css/style.css">
-    <link rel="stylesheet" href="../../css/menu.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="../../favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../../favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../../favicon/favicon-16x16.png">
-    <link rel="manifest" href="../../site.webmanifest">
-    <title>Seven Samurai (1954)</title>
-</head>
-
-<body>
-    <nav>
-        <a href="../../index.html" class='logo'><img src="../../svg/logo.svg" alt="picture of logo"></a>
-        <div class='menu'>
+{% extends "base.html" %}
+    {% block content %}
+    <div class='grid_12-12'>
+        <img src="{{ url_for('static',filename='img/seven_samurai/seven-samurai_1.webp') }}" class='film_img_1'
+        alt="Still from the movie Seven Samurai showing a rainy scene with a samurai on his knees in the mud and raising his sword.">
+        <h1 class='hero film_hero'>SEVEN <br> SAMURAI</h1>
+        <div class='info_box'>
+            <h3>FILM INFO</h3>
             <ul>
-                <li>Reel 1</li>
-                <li><a href="../../html/reel_1/joan-of-arc.html">The Passion of Joan of Arc (1928)</a></li>
-                <li><a href="../../html/reel_1/seven-samurai.html" id='current'>Seven Samurai (1954)</a></li>
-                <li><a href="../../html/reel_1/persona.html">Persona (1966)</a></li>
-                <li><a href="../../html/reel_1/star-wars.html">Star Wars (1977)</a></li>
-                <li><a href="../../html/reel_1/goodfellas.html">Goodfellas (1990)</a></li>
-            </ul>
-            <ul>
-                <li>Reel 2</li>
-                <li><a href="../../html/reel_2/godzilla.html">Godzilla (1954)</a></li>
-                <li><a href="../../html/reel_2/space-odyssey.html">2001: A Space Odyssey (1969)</a></li>
-                <li><a href="../../html/reel_2/godfather.html">The Godfather (1972)</a></li>
-                <li><a href="../../html/reel_2/stalker.html">Stalker (1979)</a></li>
-                <li><a href="../../html/reel_2/shoah.html">Shoah (1986)</a></li>
-            </ul>
-            <ul>
-                <li>Reel 3</li>
-                <li><a href="#">Coming soon!</a></li>
+                <li>Akira Kurosawa</li>
+                <li>Japan</li>
+                <li>1954</li>
+                <li>207 Minutes</li>
+                <li>Black & White</li>
+                <li>Japanese</li>
             </ul>
         </div>
-        <div class='login'>
-            <div class='exit'>
-                <div class='line'></div>
-                <div class='line'></div>
-            </div>
-            <div class='login_form'>
-                <h2>Please, login:</h2>
-                <form action="#">Username:</form>
-                <input type="text">
-                <br>
-                <br>
-                <form action="#">Password:</form>
-                <input type="password" name="password" id="pass">
-                <div class="button">
-                    Submit
-                </div>
-            </div>
-        </div>
-        <div class='nav_right'>
-            <img src="../../svg/profile.svg" alt="Profile icon" class='profile_icon'>
-            <div class='burger'>
-                <div class='line'></div>
-                <div class='line'></div>
-                <div class='line'></div>
-            </div>
-        </div>
-    </nav>
-    <main>
-        <div class='grid_12-12'>
-            <img src="../../img/seven_samurai/seven-samurai_1.webp" class='film_img_1'
-                alt="Still from the movie Seven Samurai showing a rainy scene with a samurai on his knees in the mud and raising his sword.">
-            <h1 class='hero film_hero'>SEVEN <br> SAMURAI</h1>
-            <div class='info_box'>
-                <h3>FILM INFO</h3>
-                <ul>
-                    <li>Akira Kurosawa</li>
-                    <li>Japan</li>
-                    <li>1954</li>
-                    <li>207 Minutes</li>
-                    <li>Black & White</li>
-                    <li>Japanese</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class='grid_12-12'>
-            <img src="../../img/seven_samurai/seven-samurai_2.webp" class='film_img_2'
-                alt="Still image from the film Seven Samurai showing two samuai looking at a sword lodged in a pile of dirt.">
-            <h1 class='hero film_quote' id='quote'>“Find hungry samurai. <br>Even bears come down from the mountains
-                when they are
-                hungry”</h1>
+    </div>
+    
+    <div class='grid_12-12'>
+        <img src="{{ url_for('static',filename='img/seven_samurai/seven-samurai_2.webp') }}" class='film_img_2'
+        alt="Still image from the film Seven Samurai showing two samuai looking at a sword lodged in a pile of dirt.">
+        <h1 class='hero film_quote' id='quote'>“Find hungry samurai. <br>Even bears come down from the mountains
+            when they are
+            hungry”</h1>
         </div>
         <div class='grid_12-auto'>
-            <img src="../../img/seven_samurai/seven-samurai_3.webp" class='film_img_3'
-                alt="Still image from the film Seven Samurai showing a rainy scene with two samurai looking at a third on his knees in the mud and looking defeated.">
+            <img src="{{ url_for('static',filename='img/seven_samurai/seven-samurai_3.webp') }}" class='film_img_3'
+            alt="Still image from the film Seven Samurai showing a rainy scene with two samurai looking at a third on his knees in the mud and looking defeated.">
             <h1 class='film_article_header'>Honor & Sacrifice</h1>
             <div class='film_article'>
-
+                
                 <p>
                     Seven Samurai stands as a monumental work in the history of cinema, a film that transcends its
                     period
@@ -134,12 +65,8 @@
                     making it an essential viewing experience and a testament to Kurosawa’s unparalleled artistry.
                 </p>
                 <div class='container'>
-                    <a href="../reel_1/persona.html" class='button film_button'>Next</a>
+                    <a href="{{ url_for('persona') }}" class='button film_button'>Next</a>
                 </div>
             </div>
         </div>
-    </main>
-    <script src='../../js/menu.js'></script>
-</body>
-
-</html>
+    {% endblock content %}
